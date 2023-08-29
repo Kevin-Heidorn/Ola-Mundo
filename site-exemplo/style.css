@@ -1,22 +1,45 @@
 body{
- background-color: rgb(235, 235, 235);
+ background: #171b1f;
 }
-.D1{
-    font-size: 20px;
-    text-align: center;
- color: rgb(0, 0, 0)
- background-color rgb(179, 172, 172);
- 
+.D3{
+ width: 100vw;
+height: 100vh;
+background: #171b1f;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: auto;
 }
 input {
- background-color: rgb(179, 172, 172);
+  color:  rgb(26, 134, 68); 
+  background-color: black;
+ padding: auto;
+}
+
+.input1{
  border-color: black;
- 
+ color: rgb(26, 134, 68); 
+ size: 500px;
+ height: 20px;
+
+
 
 
 
 }
-.input2{
-text-align: center;
+.input2{ 
+border-color: black;
+color: rgb(26, 134, 68);
+size: 500px;
+height: 40px;
+   }
+button{
+ color:  rgb(26, 134, 68) ;
+ background-color: black ;
+ width: 200px;
+ height: 20px;
+}  
 
-}
+
+
