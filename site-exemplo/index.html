@@ -8,22 +8,34 @@
 </head>
 <body>
     <div class="D3"> 
-    
-        <div class="input1">
-          <label> <b>Email</b></label>
-          <input type="text" name="name1" size="30">
-     
-        </div>
-        <div class="input2">
-         <label> <b>Password</b></label>
-         <input type="password" name="name2" size="30">
-        </div>
-        <div class="D4">
-        <button>Login</button>
+        <form id="loginForm" action="login.php" method="post">
+            <div class="input1">
+                <label for="email"><b>Email</b></label>
+                <input type="text" id="email" name="email" size="30" required>
+            </div>
+            <div class="input2">
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" name="password" size="30" required>
+            </div>
+            <div class="D4">
+                <button type="button" id="loginButton">Login</button>
+            </div>
+        </form>
+    </div>
 
-        </div>
-     </div>
+    <script>
+        const form = document.getElementById('loginForm');
+        const loginButton = document.getElementById('loginButton');
 
+       
+        loginButton.addEventListener('click', function () {
+            
+            form.submit();
+
+          
+            
+            window.location.href = "https://way.animahub.com.br/#/novaInscricao/2023-2"
+        });
+    </script>
 </body>
-
 </html>
