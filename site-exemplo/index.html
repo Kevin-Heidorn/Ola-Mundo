@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>SITE DO TRABALHO</title>
+    <title>Bjinterface</title>
 </head>
 <body>
-    <div class="D3"> 
+    <div class="D3">
         <form id="loginForm" action="login.php" method="post">
             <div class="input1">
                 <label for="email"><b>Email</b></label>
@@ -18,24 +18,48 @@
                 <input type="password" id="password" name="password" size="30" required>
             </div>
             <div class="D4">
-                <button type="button" id="loginButton">Login</button>
+                <button type="submit" id="loginButton" disabled>Login</button>
             </div>
         </form>
     </div>
-
     <script>
-        const form = document.getElementById('loginForm');
-        const loginButton = document.getElementById('loginButton');
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
 
-       
-        loginButton.addEventListener('click', function () {
-            
-            form.submit();
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
 
-          
-            
-            window.location.href = "https://way.animahub.com.br/#/novaInscricao/2023-2"
+            if (email.trim() === "" || password.trim() === "") {
+                alert("Preencha todos os campos!");
+            } else {
+                // Simulação de autenticação bem-sucedida (substitua por lógica real)
+                var loginBemSucedido = true;
+
+                if (loginBemSucedido) {
+                    window.location.href = "segunda.html"; // Redireciona para a página "segunda.html"
+                }
+            }
         });
+
+        document.getElementById("email").addEventListener("input", function () {
+            atualizarEstadoBotao();
+        });
+
+        document.getElementById("password").addEventListener("input", function () {
+            atualizarEstadoBotao();
+        });
+
+        function atualizarEstadoBotao() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var botaoEnviar = document.getElementById("loginButton");
+
+            if (email.trim() === "" || password.trim() === "") {
+                botaoEnviar.disabled = true; // Bloqueia o botão se algum campo estiver vazio
+            } else {
+                botaoEnviar.disabled = false; // Desbloqueia o botão se ambos os campos estiverem preenchidos
+            }
+        }
     </script>
 </body>
 </html>
